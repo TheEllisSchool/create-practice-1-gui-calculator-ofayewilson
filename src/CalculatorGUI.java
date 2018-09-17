@@ -130,17 +130,51 @@ public class CalculatorGUI extends JFrame {
 
 	private void calcHigher() {
 		// TODO Auto-generated method stub
+		double x = Double.parseDouble(in1.getText());
+		double y = Double.parseDouble(in2.getText());
+		double higherNum = 0;
 		
+		if (x > y); {
+			higherNum = x;
+			answer.setText("The higher number is: " + higherNum);	
+		}
+		
+		if (y > x); {
+			higherNum = y;
+			answer.setText("The higher number is: " + higherNum);
+		}
+		if (x == y); {
+			answer.setText("The numbers are equal");
 	}
 
 	private void calcPerChange() {
 		// TODO Auto-generated method stub
+		double x = Double.parseDouble(in1.getText());
+		double y = Double.parseDouble(in2.getText());
 		
+		double percentInc = ((y - x) / x) * 100;
+		
+			if (percentInc > 0)
+				answer.setText("Percentage is Increased by " + percentInc + "%");
+			else 
+				answer.setText("Percentage is Decreased by " + percentInc + "%");
+			
 	}
-
+	
 	private void calcFactorial() {
 		// TODO Auto-generated method stub
+		double number = Double.parseDouble(in1.getText());
 		
+		
+		int factor = 1;
+		
+		for (int i = 1; i <= number; i++);
+		{
+			factor = factor * i;
+		}
+		
+		answer.setText("Factorial is: " + factor);
+				
 	}
 
 	private void calcAvg() {
@@ -150,8 +184,6 @@ public class CalculatorGUI extends JFrame {
 		double avg = (x + y)/2;
 		
 		answer.setText("Average is: " + avg);
-		
-		
 		
 	}
 
